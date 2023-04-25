@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinToKoin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="font-sans">
+    <header class="bg-violet-900 text-white py-4 flex justify-center items-center">
+        <a href="#">Convertir</a>
+        <a href="#" class="ml-8">Sobre Nosotros</a>
+        <a href="https://fixer.io/" class="ml-8">FixerAPI</a>
+        <a href="https://www.imdb.com/title/tt0780504/" class="ml-8">Drive(2011)</a>
+        <a href="https://www.youtube.com/watch?v=D-NRe3f7E6w&ab_channel=Deusexmachina" class="ml-8">Papiado</a>
+    </header>
+    <section class="py-4 font-bold flex flex-row justify-evenly items-center bg-gradient-to-t from-violet-500 to-violet-900" id="section">
+        <div class="text-white py-10">
+            <p class="font-normal text-3xl">
+                ¡Bienvenid@ a <span class="font-bold">CoinToKoin</span>! 
+            </p>
+            <p class="font-normal mt-8">
+                Esta página web tiene como propósito demostrar la conversión 
+                <br> de diferentes tipos de moneda utilizando <a href="https://fixer.io/" class="font-bold underline">FixerAPI</a>. Adicionalmente,
+                <br> la aplicación ofrece un registro de las últimas tres conversiones realizadas. <br>
+                <br> Justo debajo de este texto, se encuentra una tabla que muestra
+                <br> los diferentes tipos de moneda con sus coeficientes de 
+                <br> conversión basados en el dólar norteamericano (USD).
+            </p>
+        </div>
+        <div class="flex flex-col justify-center items-center bg-white text-violet p-2 rounded-lg h-5/6 shadow-md">
+            <form action="#" class="inline-flex flex-col justify-center items-center">
+                <input 
+                class="bg-violet-200 text-violet-500 text-sm rounded-lg block w-full pl-5 p-2.5 placeholder-violet-500"
+                type="text" 
+                placeholder="Ingresar valor ($)"
+                name="valor"
+                id="texto-valor">
+            <div class="flex justify-evenly items-center my-2 w-full">
+                <select name="" id="" class="inline border border-violet rounded-lg p-1 text-violet-400">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+                <input type="submit" value="&#xea45" class="icon-tab text-violet-700 cursor-pointer"  id="invertir" />
+                <select name="" id="" class="inline border border-violet rounded-lg p-1 text-violet-400">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+            </form>
+            <input class="bg-violet-500 border-white border rounded-lg text-white text-sm w-fit px-5 py-2.5 cursor-pointer" type="submit" value="Convertir" id="convertir" />
+            <div></div>
+        </div>
+    </section>
+    <section class="py-4 font-bold flex flex-row justify-evenly items-center bg-gradient-to-t from-white to-violet-500" id="tablas">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-4/12">
+            <table class="w-full text-sm text-left text-violet dark:text-gray-400">
+                <thead class="flex w-full text-xs text-violet uppercase bg-violet-900 border-violet-700">
+                    <tr class="flex w-full">
+                        <th scope="col" class="pl-6 py-3 w-4/12 text-violet-400">Nombre de moneda</th>
+                        <th scope="col" class=" py-3 w-2/12 text-violet-400">Moneda</th>
+                        <th scope="col" class=" py-3 w-3/12 text-violet-400">Cantidad (USD)</th>
+                        <th scope="col" class="py-3 w-3/12 text-violet-400">Hora de revisión</th>
+                    </tr>
+                </thead>
+                <tbody class="flex flex-col items-center justify-between overflow-y-auto max-h-500 w-full" style="height: 25.5vh" id="tablaCoef">
+                </tbody>
+            </table>
+        </div>
+        <!-- SEGUNDA TABLA -->
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-4/12">
+            <table class=" w-full text-sm text-left text-violet dark:text-gray-400">
+                <thead class="text-xs text-violet uppercase bg-violet-900 border-violet-700">
+                    <tr>
+                        <th scope="col" class="pl-6 py-3 text-violet-400">Valor</th>
+                        <th scope="col" class="px-6 py-3 text-violet-400">Moneda</th>
+                        <th scope="col" class="px-6 py-3 text-violet-400">Valor*</th>
+                        <th scope="col" class="px-6 py-3 text-violet-400">Moneda*</th>
+                        <th scope="col" class="px-6 py-3 text-violet-400">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody class="overflow-y-auto max-h-500">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="text-violet-900">
+        <p style="margin-left: 60vw;">ⓘ Los campos marcados con * se refieren a los datos finales.</p>
+    </section>
+    <footer class="bg-violet-900 h-12 inset-x-0 bottom-0 absolute shadow-sm text-violet-400 flex justify-center items-center font-bold">
+        <p>© CoinToKoin</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
